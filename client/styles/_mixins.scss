@@ -1,0 +1,29 @@
+
+@mixin h1 {
+    font-family: $primary-font;
+    font-size: 2.25rem;
+}
+
+@mixin button {
+    width: 11.8125rem;
+    height: 2.5625rem;
+    background-color: #32302F;
+    color: white;
+    font-family: $primary-font;
+}
+
+@mixin font {
+    font-family: $primary-font, 'Arial', 'Helvetica';
+}
+
+@mixin p-font {
+    @include font;
+    font-size: 1.5rem;
+    color: #32302F;
+}
+
+@mixin details-font {
+    @include font;
+    font-size: 1.5rem;
+    color:  #32302F;
+}

@@ -15,8 +15,8 @@ function App() {
      <Header />
      <Routes>
         {/* <Route path="/" element={<Navigate to="/expenses" />} /> */}
-        <Route path='/expense'><Expenses expenses ={expenses} setExpenses={setExpenses} budget = {budget}/></Route>
-        <Route path='/'><Main budget ={budget} setBudget={setBudget} expense = {expenses}/></Route>
+        <Route path="/expenses" element={<Expenses />} />
+        <Route path='/' element={<Main budget ={budget} setBudget={setBudget} expenses = {expenses} setExpenses={setExpenses}/>}/>
       </Routes>
      
     </BrowserRouter>

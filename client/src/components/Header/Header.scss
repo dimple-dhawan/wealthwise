@@ -1,4 +1,4 @@
-@use '../../styles/_mixins.scss' as *;
+@use '../../styles/mixins' as *;
 .header {
     
     height: 10rem;
@@ -47,4 +47,14 @@
         }
 
     }
+}
+a{
+    text-decoration: none;
+   
+}
+a.active {
+    
+    text-decoration: none;
+    
+    
 }

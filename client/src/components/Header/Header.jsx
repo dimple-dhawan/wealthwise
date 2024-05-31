@@ -1,19 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import "./Header.scss";
-
+import "./Header.scss"
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
     <div className="header">
       <div className="header__wrapper">
         <div className="header__wrapper--left">
-          <h1>WealthWise</h1>
+        <NavLink to="/"> <h1>WealthWise</h1></NavLink>
+         
         </div>
         <div className="header__wrapper--right">
           <ul>
-            <li><Link to="/expenses">Add Expense</Link></li>
-            <li><Link to="/details">Details</Link></li>
+          <NavLink to="/expenses"><li>Add Expense</li></NavLink>
+          <NavLink to="/details"> <li> Details</li></NavLink>
           </ul>
         </div>
       </div>

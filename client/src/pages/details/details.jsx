@@ -3,11 +3,12 @@ import './details.scss';
 
 function Details() {
   const [expenses, setExpenses] = useState([]);
+  const serverUrl = process.env.REACT_APP_BASE_URL;
 
   useEffect(() => {
     const fetchExpenses = async () => {
       try {
-        const response = await fetch('http://localhost:8080/weathwise/expenses');
+        const response = await fetch(`${serverUrl}/weathwise/expenses`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -19,7 +20,7 @@ function Details() {
     };
 
     fetchExpenses();
-  }, []);
+  }, [serverUrl]); 
 
   return (
     <div className='details'>

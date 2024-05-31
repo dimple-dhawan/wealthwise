@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./expenses.scss"
 
-export default function Expenses() {
+
+export default function Expenses({expenses,setExpenses,budget}) {
+  const [inputExpense,setInputExpense] = useState('');
+  const handleExpense = () => {
+    setExpenses(expenses + parseFloat(inputExpense))
+    setInputExpense('')
+
+  }
+    
   return (
     <div className='expenses'>
         <h1 className='expenses__title'>Add Expense</h1>
         <form>
                 <div className="expense-group">
                     <label>Amount</label>
-                    <input type="amount" id="amount" name="amount" placeholder='$10' />
+                    <input type="number" id="amount" name="amount" placeholder='$10.00' value={inputExpense} onChange={(e) => setInputExpense(e.target.value)}/>
                 </div>
                 <div className="expense-group">
                 <label for="category">Category</label>
@@ -21,7 +29,7 @@ export default function Expenses() {
                         <option value="category5">Others</option>
                     </select>
                 </div>
-                <button type="submit">ADD</button>
+                <button type="submit" onClick={handleExpense}>ADD</button>
             </form>
     </div>
   )

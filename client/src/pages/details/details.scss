@@ -10,13 +10,13 @@
     list-style-type: none;
     }
 
-    &__amount {
+    &__date {
     padding-bottom: 1rem;
     @include p-font;
     }
 
-    &__expense {
-    @include p-font;
+    &__date, &__expense, &__amount {
+        @include p-font;
     }
 
 }

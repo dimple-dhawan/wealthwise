@@ -8,9 +8,9 @@ function Details() {
   useEffect(() => {
     const fetchExpenses = async () => {
       try {
-        const response = await fetch(`${serverUrl}/weathwise/expenses`);
+        const response = await fetch(`${serverUrl}/wealthwise/expenses`);
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error('Failed to fetch expenses');
         }
         const data = await response.json();
         setExpenses(data);
@@ -30,6 +30,7 @@ function Details() {
           <li key={expense.id}>
             <div className='details__expense'>Expense: {expense.expense}</div>
             <div className='details__amount'>Amount: {expense.amount}</div>
+            <div className='details__date'>Date: {expense.date}</div>
           </li>
         ))}
       </ul>

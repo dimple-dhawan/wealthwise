@@ -1,0 +1,15 @@
+@use '../../../styles/_mixins.scss' as *;
+
+.details {
+    &__title {
+        text-align: center;
+        font-family: 'LibreCaslon';
+        font-size: 2.25rem;
+        color: #32302F;
+    }
+
+    &__display {
+        text-align: center;
+    }
+
+}

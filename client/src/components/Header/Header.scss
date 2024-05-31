@@ -1,9 +1,9 @@
-@use '../../styles/global' as *;
-
+@use '../../styles/mixins' as *;
 .header {
     
     height: 10rem;
     background-color: #32302F;
+    @include p-font;
 
     &__wrapper {
         display: flex;
@@ -47,4 +47,14 @@
         }
 
     }
+}
+a{
+    text-decoration: none;
+   
+}
+a.active {
+    
+    text-decoration: none;
+    
+    
 }

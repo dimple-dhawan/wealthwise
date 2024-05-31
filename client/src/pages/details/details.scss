@@ -1,0 +1,22 @@
+@use '../../styles/_mixins.scss' as *;
+
+.details {
+    &__title {
+        text-align: center;
+        @include h1;
+    }
+
+    &__display {
+    list-style-type: none;
+    }
+
+    &__date {
+    padding-bottom: 1rem;
+    @include p-font;
+    }
+
+    &__date, &__expense, &__amount {
+        @include p-font;
+    }
+
+}

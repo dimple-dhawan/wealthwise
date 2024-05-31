@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from './components/Header/Header';
 import Expenses from './pages/expenses/expenses.jsx';
 import { useState } from 'react';
+import Details from './pages/details/details.jsx';
 
 function App() {
 
@@ -14,9 +15,11 @@ function App() {
     <BrowserRouter>
      <Header />
      <Routes>
-        {/* <Route path="/" element={<Navigate to="/expenses" />} /> */}
+       
         <Route path="/expenses" element={<Expenses />} />
         <Route path='/' element={<Main budget ={budget} setBudget={setBudget} expenses = {expenses} setExpenses={setExpenses}/>}/>
+        <Route path="/details" element={<Details />} />
+
       </Routes>
      
     </BrowserRouter>

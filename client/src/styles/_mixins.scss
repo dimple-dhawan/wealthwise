@@ -1,5 +1,9 @@
+@use './tipography';
+
+$primary-font: 'LibreCaslon';
+
 @mixin h1 {
-    font-family: 'LibreCaslon';
+    font-family: $primary-font;
     font-size: 2.25rem;
 }
 
@@ -8,11 +12,11 @@
     height: 2.5625rem;
     background-color: #32302F;
     color: white;
-    font-family: 'LibreCaslon';
+    font-family: $primary-font;
 }
 
 @mixin font {
-    font-family: 'LibreCaslon', 'Helvetica', 'Sans';
+    font-family: $primary-font, 'Arial', 'Helvetica';
 }
 
 @mixin p-font {
@@ -25,4 +29,5 @@
     @include font;
     font-size: 1.5rem;
     color:  #32302F;
+
 }

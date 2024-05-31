@@ -10,9 +10,9 @@ require("dotenv").config();
 const PORT = process.env.PORT;
 app.use(cors());
 app.use(express.json());
-app.use ("/weathwise/categories", categoryRoute);
-app.use ("/weathwise/budget", budgetRoute);
-app.use ("/weathwise/expenses", expenseRoutes);
+app.use ("/wealthwise/categories", categoryRoute);
+app.use ("/wealthwise/budget", budgetRoute);
+app.use ("/wealthwise/expenses", expenseRoutes);
 
 
 

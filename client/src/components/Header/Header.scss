@@ -1,0 +1,50 @@
+@use '../../styles/global' as *;
+
+.header {
+    
+    height: 10rem;
+    background-color: #32302F;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        &--left {
+            
+            margin-top: 0.4rem;
+            h1{
+                font-family: 'LibreCaslon';
+                font-size: 2.25rem;
+                color:white;
+            }
+        }
+
+        &--right {
+
+            ul {
+                display: flex;
+                margin: 0.5rem;
+                padding: 0;
+                list-style-type: none;
+                font-size: 1rem;
+        
+                li {
+                    margin: 0.2rem 1.6rem;
+                    cursor: pointer;
+                    text-decoration: none;
+                    color:white;
+                    padding:0.6rem;
+                
+                    &:hover {
+                        
+                        
+                        background-color:black;
+                    }
+                }
+            }
+        }
+
+    }
+}

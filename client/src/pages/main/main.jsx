@@ -1,4 +1,4 @@
-import './Main.scss';
+import './main.scss';
 
 
 

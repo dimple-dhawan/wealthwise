@@ -1,0 +1,54 @@
+@use '../../styles/global' as *;
+
+.expenses {
+    
+
+    &__title {
+        font-family: 'LibreCaslon';
+        font-size: 2.25rem;
+        color: #32302F;
+        text-align: center;
+    }
+
+    form {
+       margin-left:1rem;
+        .expense-group {
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+
+            label {
+                margin-left:0.3rem;
+                font-family: 'LibreCaslon';
+                margin-bottom: 0.5rem;
+                color: #32302F;
+               
+                
+            }
+
+            input,
+            select {
+                width: 50%;
+                padding: 0.5rem;
+                border: 1px solid #c5bfbf;
+                border-radius: 4px;
+                margin:0.5rem;
+                
+            }
+
+            
+        }
+        button {
+            width: 11.8125rem;
+            height: 2.5625rem;
+            background-color: #32302F;
+            color: white;
+            margin:0.5rem;
+           
+        }
+
+        button:hover {
+            background-color: black;
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
-import "./Header.scss"
+import { Link } from 'react-router-dom';
+import "./Header.scss";
 
 
 export default function Header() {
@@ -11,11 +12,11 @@ export default function Header() {
         </div>
         <div className="header__wrapper--right">
           <ul>
-          <li>Add Expense</li>
-          <li> Details</li>
-         </ul>
+            <li><Link to="/expenses">Add Expense</Link></li>
+            <li><Link to="/details">Details</Link></li>
+          </ul>
         </div>
       </div>
     </div>
-  )
+  );
 }

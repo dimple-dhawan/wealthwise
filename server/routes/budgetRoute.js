@@ -1,8 +1,9 @@
+const exp = require("constants");
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
-const path = "./data/expenses.json";
+const path = "./data/budget.json";
 
 require("dotenv").config();
 const PORT = process.env.PORT || 8080;
@@ -15,21 +16,21 @@ const readData = () => {
 
 router.get("/", (_req, res) => {
     const data = readData();
-    res.json(data)
+    res.send(data)
 });
 
+
 router.post("/", (req, res) => {
-    const newExpense = {
+    const newBudget = {
         id: uuidv4(),
-        expense: req.body.expense,
-        amount: req.body.amount,
+        budget: req.body.budget,
         date: req.body.date
     }
 
-    const expenses = readData();
-    expenses.push(newExpense);
-    fs.writeFileSync(path, JSON.stringify(expenses));
-    res.status(201).json(newExpense);
+    const budget = readData();
+    budget.push(newBudget);
+    fs.writeFileSync(path, JSON.stringify(budget));
+    res.status(201).json(newBudget);
 });
 
 module.exports = router;

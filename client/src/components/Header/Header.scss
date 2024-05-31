@@ -3,6 +3,7 @@
     
     height: 10rem;
     background-color: #32302F;
+    @include p-font;
 
     &__wrapper {
         display: flex;

@@ -1,0 +1,28 @@
+@mixin h1 {
+    font-family: 'LibreCaslon';
+    font-size: 2.25rem;
+}
+
+@mixin button {
+    width: 11.8125rem;
+    height: 2.5625rem;
+    background-color: #32302F;
+    color: white;
+    font-family: 'LibreCaslon';
+}
+
+@mixin font {
+    font-family: 'LibreCaslon', 'Helvetica', 'Sans';
+}
+
+@mixin p-font {
+    @include font;
+    font-size: 1.5rem;
+    color: #32302F;
+}
+
+@mixin details-font {
+    @include font;
+    font-size: 1.5rem;
+    color:  #32302F;
+}

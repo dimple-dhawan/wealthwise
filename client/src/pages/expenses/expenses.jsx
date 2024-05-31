@@ -1,6 +1,6 @@
-import React from 'react'
 import "./expenses.scss"
 import axios from "axios";
+
 
 export default function Expenses() {
   const today = new Date();
@@ -30,7 +30,7 @@ export default function Expenses() {
         <form onSubmit={(e) => addExpense(e)}>
                 <div className="expense-group">
                     <label>Amount</label>
-                    <input type="amount" id="amount" name="amount" placeholder='$10' />
+                    <input type="amount" id="amount" name="amount" placeholder='$10.00'/>
                 </div>
                 <div className="expense-group">
                 <label htmlFor="category">Category</label>

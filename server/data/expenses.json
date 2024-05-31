@@ -1,1 +1,16 @@
-[{"id":"1","expense":"Food","amount":"14.97","date":"05-30-2024"},{"id":"2","expense":"Food","amount":"11.50","date":"05-29-2024"},{"id":"2fd0934d-17ee-40ce-b629-7c21d98f9da8","expense":"Food","amount":"14.99","date":"05-30-2024"}]
+[
+  { "id": "1", "expense": "Food", "amount": 14.97, "date": "05-30-2024" },
+  { "id": "2", "expense": "Food", "amount": 11.5, "date": "05-29-2024" },
+  {
+    "id": "2fd0934d-17ee-40ce-b629-7c21d98f9da8",
+    "expense": "Food",
+    "amount": 14.99,
+    "date": "05-30-2024"
+  },
+  {
+    "id": "2fd0934d-17ee-40ce-b629-7c21d98sfs85",
+    "expense": "Food",
+    "amount": 1085.52,
+    "date": "05-30-2024"
+  }
+]

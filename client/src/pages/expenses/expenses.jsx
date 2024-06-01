@@ -1,10 +1,11 @@
-import React from 'react'
 import "./expenses.scss"
 import axios from "axios";
 
+
 export default function Expenses() {
   const today = new Date();
-   const exactDate = today.toDateString();
+  const formattedDate = `${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}-${today.getFullYear()}`;
+  
   const addExpense = async(event)=>{
     event.preventDefault();
     const url = process.env.REACT_APP_BASE_URL + "/wealthwise/expenses";
@@ -13,7 +14,7 @@ export default function Expenses() {
         await axios.post(process.env.REACT_APP_BASE_URL + "/wealthwise/expenses", {
         amount: event.target.amount.value,
         expense: event.target.category.value,
-        date:exactDate,
+        date:formattedDate,
       });
 
       alert("expense was succesfully added");
@@ -30,7 +31,7 @@ export default function Expenses() {
         <form onSubmit={(e) => addExpense(e)}>
                 <div className="expense-group">
                     <label>Amount</label>
-                    <input type="amount" id="amount" name="amount" placeholder='$10' />
+                    <input type="amount" id="amount" name="amount" placeholder='$10.00'/>
                 </div>
                 <div className="expense-group">
                 <label htmlFor="category">Category</label>
